@@ -1,9 +1,8 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import botao from "./components/Botao";
+import Botao from "./components/Botao.jsx";
 
 const App = () => {
-
   const handlePress = () => {
     console.log("Botão Pressionado!");
   };
@@ -16,15 +15,15 @@ const App = () => {
     container: {
       flex: 1,
       justifyContent: 'center',
-      alignItems: 'center'
-    }
+      alignItems: 'center',
+    },
   });
 
   return (
     <View style={styles.container}>
-      <botao label="Clica" corFundo="purple" onPress{handlePress}/>
-      <botao label="Clica" corFundo="green" onPress{teste}/>
-      <botao label="Clica" corFundo="purple" onPress{handlePress}/>
+      <Botao label="Clica" corFundo="purple" onPress={handlePress} /> 
+      <Botao label="Clica" corFundo="green" onPress={teste} /> 
+      <Botao label="Clica" corFundo="purple" onPress={handlePress} /> 
     </View>
   );
 };
